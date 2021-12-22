@@ -2,7 +2,7 @@
 
 In this kata project you will be creating a Complete BlackJack Card Game in Scala.
 
-Here are the requirements:
+## Requirements
 
 * You need to create a simple text-based [BlackJack](https://en.wikipedia.org/wiki/Blackjack) game
 * The game needs to have one player versus an automated dealer.
@@ -11,7 +11,7 @@ Here are the requirements:
 * You need to keep track of the player's total money.
 * You need to alert the player of wins, losses, or busts, etc...
 
-Additionally:
+## Additionally
 * Can be solved with mutability, or immutability
 * Can be solved using just functions, or OOP
 
