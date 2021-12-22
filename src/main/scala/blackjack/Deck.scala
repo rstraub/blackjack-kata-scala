@@ -1,5 +1,7 @@
 package blackjack
 
+import scala.util.Random
+
 case class Deck(cards: List[Card])
 
 object Deck {
@@ -7,5 +9,5 @@ object Deck {
     Ranks.values.toList.map(Card(_, s))
   )
 
-  def shuffled(): Deck = Deck(List())
+  def shuffled(): Deck = Deck(Random.shuffle(cards))
 }

@@ -63,4 +63,11 @@ class DeckSpec extends AnyFlatSpec with Matchers {
       Card(ACE, CLUBS),
     )
   }
+
+  "shuffled" should "contain all cards in random order" in {
+    val shuffled = Deck.shuffled()
+
+    shuffled.cards should contain allElementsOf Deck.cards
+    shuffled should not be Deck.shuffled()
+  }
 }
