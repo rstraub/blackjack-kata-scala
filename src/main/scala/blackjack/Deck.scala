@@ -1,14 +1,12 @@
 package blackjack
 
-import blackjack.Ranks.TWO
-import blackjack.Suits.HEARTS
-
 case class Deck(cards: List[Card])
 
 object Deck {
-  def unshuffled(): Deck = {
-    Deck(List.fill(52)(Card(TWO, HEARTS)))
-  }
+  val cards: List[Card] = Suits.values.toList.foldRight(List[Card]())((s, l) => {
+    val suitCards = Ranks.values.toList.map(Card(_, s))
+    l.appendedAll(suitCards)
+  })
 
   def shuffled(): Deck = Deck(List())
 }

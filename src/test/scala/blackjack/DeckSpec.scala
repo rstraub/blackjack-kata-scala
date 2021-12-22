@@ -7,10 +7,8 @@ import org.scalatest.matchers.should.Matchers
 
 class DeckSpec extends AnyFlatSpec with Matchers {
   "deck" should "contain all 52 cards" in {
-    val deck = Deck.unshuffled()
-
-    deck.cards should have size 52
-    deck.cards should contain allOf(
+    Deck.cards should have size 52
+    Deck.cards shouldBe List(
       Card(TWO, HEARTS),
       Card(THREE, HEARTS),
       Card(FOUR, HEARTS),
